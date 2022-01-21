@@ -1,17 +1,17 @@
 const electron = require('electron');
-const url = require('url');
-const path = require('path');
 
 const { app, BrowserWindow } = electron;
 
 let win;
 const createWindow = () => {
   win = new BrowserWindow({
-    nodeIntegration: true,
     width: 1400,
     height: 800,
     toolbar: false,
-    resizable: true
+    resizable: true,
+    webPreferences: {
+      nodeIntegration: true,
+    }
   });
 
   win.setResizable(true);
