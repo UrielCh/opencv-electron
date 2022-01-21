@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "@u4/opencv4nodejs": "^6.0.8",
-    "electron": "^2.0.18"
+    "electron": "^4.2.12"
   },
   "devDependencies": {
     "electron-rebuild": "^3.2.7"
