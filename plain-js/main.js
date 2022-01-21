@@ -7,6 +7,7 @@ const { app, BrowserWindow } = electron;
 let win;
 const createWindow = () => {
   win = new BrowserWindow({
+    nodeIntegration: true,
     width: 1400,
     height: 800,
     toolbar: false,
