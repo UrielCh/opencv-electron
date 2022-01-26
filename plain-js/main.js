@@ -11,6 +11,7 @@ const createWindow = () => {
     resizable: true,
     webPreferences: {
       nodeIntegration: true,
+      contextIsolation: false
     }
   });
 
