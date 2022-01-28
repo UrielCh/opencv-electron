@@ -11,6 +11,10 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     height: 800,
     width: 1200,
+    webPreferences: {
+      nodeIntegration: true,
+      contextIsolation: false
+    }
   })
 
   const protocol = 'http:'
@@ -27,12 +31,12 @@ function createWindow() {
 
 app.on('ready', () => {
   createWindow()
-  process.env.REACT_DEVTOOLS_PATH
-    ? BrowserWindow.addDevToolsExtension(process.env.REACT_DEVTOOLS_PATH as string)
-    : console.log('failed to load react dev tools process.env.REACT_DEVTOOLS_PATH:', process.env.REACT_DEVTOOLS_PATH)
-  process.env.REDUX_DEVTOOLS_PATH
-    ? BrowserWindow.addDevToolsExtension(process.env.REDUX_DEVTOOLS_PATH as string)
-    : console.log('failed to load redux dev tools process.env.REDUX_DEVTOOLS_PATH:', process.env.REDUX_DEVTOOLS_PATH)
+   process.env.REACT_DEVTOOLS_PATH
+     ? BrowserWindow.addDevToolsExtension(process.env.REACT_DEVTOOLS_PATH as string)
+     : console.log('failed to load react dev tools process.env.REACT_DEVTOOLS_PATH:', process.env.REACT_DEVTOOLS_PATH)
+   process.env.REDUX_DEVTOOLS_PATH
+     ? BrowserWindow.addDevToolsExtension(process.env.REDUX_DEVTOOLS_PATH as string)
+     : console.log('failed to load redux dev tools process.env.REDUX_DEVTOOLS_PATH:', process.env.REDUX_DEVTOOLS_PATH)
 })
 
 app.on('window-all-closed', () => {

@@ -1,4 +1,4 @@
-import * as cv from 'opencv4nodejs';
+import * as cv from '@u4/opencv4nodejs';
 import * as path from 'path';
 import * as React from 'react';
 
