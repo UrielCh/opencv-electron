@@ -20,12 +20,12 @@
   },
   "homepage": "https://github.com/justadudewhohacks/opencv-electron#readme",
   "scripts": {
-    "electron-rebuild": "build-opencv --electron --version 4.5.4 build",
+    "electron-rebuild": "build-opencv --electron --version 4.5.5 --flags '-DWITH_FFMPEG=OFF' build",
     "install": "npm run electron-rebuild",
     "start": "electron main.js"
   },
   "dependencies": {
-    "@u4/opencv4nodejs": "^6.0.10",
+    "@u4/opencv4nodejs": "^6.2.1",
     "electron": "16.0.7"
   },
   "devDependencies": {
